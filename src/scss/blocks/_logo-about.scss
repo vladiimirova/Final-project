@@ -1,0 +1,51 @@
+.logo-about {
+  display: flex;
+
+  @include mobile {
+    align-items: center;
+  }
+
+  @include mobileXsDown {
+    align-items: normal;
+  }
+
+
+  &-link::after {
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+
+    @include tablet {
+      content: url(../../img/svg/Slash-big.svg);
+    }
+
+    @include mobile {
+      content: url(../../img/svg/Slash.svg);
+      transform: translateY(50%);
+    }
+
+    @include mobileXsDown {
+      transform: translateY(0);
+    }
+  }
+
+  .logo-svg-black {
+    display: inline-block;
+
+    @include mobileXsDown {
+      width: 69.3px;
+    }
+  }
+
+  .logo-item-about {
+    color: var(--main---regular);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+}

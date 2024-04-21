@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>hlegal</title>
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/Symbol.svg">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main>
+		<div class="bg-gradient">
+			@@include('sections/provider.html')
+			@@include('sections/idea.html')
+			@@include('sections/cards.html')
+		</div>
+		@@include('sections/team.html')
+		@@include('sections/trust.html')
+		@@include('sections/publications.html')
+
+
+	</main>
+	@@include('blocks/footer.html')
+	
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

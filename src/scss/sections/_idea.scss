@@ -1,0 +1,152 @@
+.idea {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    @include mobile{
+      padding-right: 0;
+    }
+
+    @include tablet {
+      padding-right: 0;
+    }
+
+    @include tabletHd {
+      padding-right: (--container-padding-standart);
+    }
+  }
+
+  .idea-wrapper {
+    @include tabletHd {
+      display: flex;
+      justify-content: center;
+    }
+
+    .idea-menu {
+      display: flex;
+
+      @include mobile {
+        overflow: scroll;
+        white-space: nowrap;
+        column-gap: 30px;
+        padding-bottom: 30px;
+      }
+
+      @include tablet {
+        overflow: scroll;
+        white-space: nowrap;
+        column-gap: 30px;
+        padding-bottom: 60px;
+      }
+
+      @include tabletHd {
+        width: 439px;
+        overflow: visible;
+        padding-right: 60px;
+        border-right: 4px solid rgba(255, 255, 255, 0.3);
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 30px;
+        padding-bottom: 0;
+      }
+
+      &-item {
+        text-align: right;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mobileXsDown {
+          font-size: 30px;
+        }
+
+        &-link {
+          &-active {
+            @include text-gradient();
+
+            &:hover {
+              @include text-gradient(var(--accent));
+              // background: linear-gradient(90deg, #f0145a 0%, #f0145a 100%);
+            }
+          }
+
+          &-disabled {
+            color: var(--grey---text);
+          }
+
+          &:hover {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+  }
+
+  .idea-inf {
+    @include mobile {
+      padding-right: var(--container-padding-small);
+    }
+    
+    @include tablet {
+      padding-right: var(--container-padding-standart);
+    }
+
+    @include tabletHd {
+      padding-left: 60px;
+    }
+
+    .idea-subtitle {
+      color: var(--basic-white);
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 30px;
+
+      @include mobileXsDown {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        margin-top: 30px;
+      }
+
+      @include tablet {
+        margin-top: 60px;
+      }
+
+      @include tabletHd {
+        margin-top: 0;
+        width: 405px;
+      }
+
+      @include laptopSize {
+        width: 581px;
+      }
+
+      @include laptopHdSize {
+        width: 861px;
+      }
+    }
+
+    .idea-descr {
+      color: var(--basic-white);
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px; /* 157.895% */
+      @include tabletHd {
+        width: 405px;
+      }
+
+      @include laptopSize {
+        width: 581px;
+      }
+
+      @include laptopHdSize {
+        width: 861px;
+      }
+    }
+  }
+}

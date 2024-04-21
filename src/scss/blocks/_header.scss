@@ -1,0 +1,88 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .container {
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include tablet {
+    .header-box {
+      display: block;
+  
+      .menu-top {
+        margin-bottom: 30px;
+      }
+  
+      .logo {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .grid-box {
+    @include mobile {
+      display: grid;
+  
+      grid-template-areas:
+        "menu-top  menu-top"
+        "logo  nav";
+  
+      .logo {
+        grid-area: logo;
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+  
+      .menu-top {
+        grid-area: menu-top;
+      }
+  
+      .nav {
+        grid-area: nav;
+        justify-self: end;
+        margin-top: 12.5px;
+        margin-right: 15px;
+      }
+    }
+  
+    @include tabletLg {
+      display: grid;
+  
+      grid-template-rows: 30px 36px;
+  
+      grid-template-columns: 130px auto;
+      grid-template-areas:
+        "logo menu-top"
+        "logo nav";
+  
+      .logo {
+        grid-area: logo;
+        margin: 0;
+      }
+  
+      .menu-top {
+        grid-area: menu-top;
+        justify-self: end;
+        margin: 0;
+      }
+  
+      .nav {
+        grid-area: nav;
+        justify-self: end;
+        align-self: end;
+        margin: 3px;
+      }
+    }
+  }
+}

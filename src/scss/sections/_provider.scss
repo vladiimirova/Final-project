@@ -1,0 +1,114 @@
+.provider {
+  position: relative;
+  overflow: hidden;
+
+  .big-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include mobile {
+      width: 145%;
+    }
+
+    @include mobileXsDown {
+      width: 166%;
+    }
+
+
+    @include tablet {
+      width: 137.9%;
+    }
+
+    @include tabletHd {
+      width: 100%;
+    }
+
+    
+
+    .big-logo {
+      transition: width 0.2s ease-in;
+
+      @include mobile {
+        width: 100%;
+        transform: translateX(-114px);
+      }
+
+      @include mobileXsDown {
+        width: 100%;
+        transform: translateX(-97px);
+      }
+
+
+      @include tablet {
+        width: 100%;
+        transform: translateX(-121px);
+      }
+
+      @include tabletHd {
+        width: 74%;
+        transform: translateX(0)
+      }
+
+      @include laptopSize {
+        width: 51.707%;
+      }
+
+      @include laptopHdSize {
+        width: 56.8%;
+        max-width: 872px;
+      }
+    }
+  }
+  .title-1 {
+    color: var(--basic-white);
+    font-family: var(--font-main);
+    font-size: 38px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #fff;
+
+    @include mobileXsDown {
+      max-width: 315px;
+      left: 50%;
+      top: 44%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .anhor-link {
+    position: absolute;
+    left: 48.5%;
+    top: 95%;
+    width: 42px;
+    height: 42px;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: inline-block;
+  }
+
+  .anchor-link svg {
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  }
+
+  .anchor-link svg:hover,
+  .anchor-link svg:focus,
+  .anchor-link svg:focus-visible {
+    transform: translateY(3px);
+  }
+
+  .anhor-link:hover svg circle {
+    stroke: #f0145a;
+  }
+
+  .anhor-link:hover svg path {
+    stroke: #f0145a;
+    transform: translateY(3px);
+  }
+}

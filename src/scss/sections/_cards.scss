@@ -1,0 +1,96 @@
+.section-cards {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .cards-link {
+    color: var(--active---regular);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 2px;
+
+    &::after {
+      content: url(../../img/svg/Arrow.svg);
+    }
+
+    &:hover {
+      color: var(--active-active);
+    }
+  }
+
+  .cards-title {
+    @include text-gradient-back();
+    display: block;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 60px;
+
+    @include mobileXsDown {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .cards {
+    display: grid;
+
+    @include mobile {
+      row-gap: 60px;
+    }
+
+    @include mobileXsDown {
+      row-gap: 30px;
+    }
+
+    @include tablet {
+      column-gap: 60px;
+      row-gap: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(calc(50% - 30px), auto));
+    }
+
+    @include tabletHd {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc(33.33% - 40px), auto)
+      );
+    }
+
+    &__item {
+      color: white;
+      min-height: 200px;
+
+      .icon-box {
+        img {
+          padding: 14px;
+          border-radius: 24px;
+          background: var(--basic-white);
+          margin-bottom: 30px;
+        }
+      }
+
+      .card-subtitle {
+        color: var(--active---regular);
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 15px;
+      }
+
+      .card-descr {
+        color: var(--basic-white);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+      }
+    }
+  }
+}

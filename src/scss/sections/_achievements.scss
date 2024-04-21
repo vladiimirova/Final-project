@@ -1,0 +1,85 @@
+.achievements {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--grey---bg-);
+
+  .achivements-title {
+    color: var(--main---regular);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .swiper-achievements {
+    .swiper-wrapper {
+      .swiper-slide {
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--basic-white);
+
+        @include mobile {
+          padding-top: 24.4px;
+          padding-bottom: 24.4px;
+        }
+
+        @include tablet {
+          padding-top: 24.4px;
+          padding-bottom: 24.4px;
+        }
+
+        @include tabletHd {
+          padding-top: 25px;
+          padding-bottom: 25px;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      margin-top: 30px;
+      position: relative;
+
+      &-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        background-color: #d3edff;
+        opacity: 1;
+
+        @include mobile {
+          &:nth-child(n + 7) {
+            display: none;
+          }
+        }
+
+        @include tablet {
+          &:nth-child(n + 4) {
+            display: none;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        &:hover {
+          background-color: #76bdf2;
+        }
+
+        &-active {
+          background-color: var(--active---regular);
+        }
+      }
+    }
+  }
+}

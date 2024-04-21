@@ -1,0 +1,193 @@
+.footer {
+  padding-bottom: 30px;
+  background-color: var(--grey---bg-);
+
+  .grid-box-footer {
+    padding-top: 32px;
+    border-top: 2px solid var(--grey---separator);
+    @include tablet {
+      display: grid;
+
+      grid-template-rows: 20px 59px;
+
+      grid-template-areas:
+        "adress-box company-footer"
+        "contacts-box contacts-box";
+
+      .adress-box {
+        grid-area: adress-box;
+      }
+
+      .contacts-box {
+        margin-top: 21px;
+        grid-area: contacts-box;
+      }
+
+      .company-footer {
+        grid-area: company-footer;
+      }
+    }
+
+    .adress-box {
+      @include mobile {
+        text-align: center;
+        margin-bottom: 21px;
+      }
+      @include tablet {
+        display: flex;
+        align-items: center;
+      }
+
+      .adress-desr {
+        color: var(--main---regular);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+
+        @include tablet {
+          &::after {
+            content: " ";
+            width: 6px;
+            height: 6px;
+            margin-right: 6px;
+            margin-left: 6px;
+            border-radius: 50%;
+            background-color: var(--grey---text);
+            display: inline-block;
+            border: 1px solid var(--grey---text);
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .adress-link {
+        color: var(--active---regular);
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: var(--active-active);
+        }
+      }
+    }
+
+    .contacts-box {
+      @include mobile {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+      }
+
+      @include tablet {
+        div:not(:last-child)::after {
+          content: " ";
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+          border-radius: 50%;
+          background-color: var(--grey---text);
+          display: inline-block;
+          border: 1px solid var(--grey---text);
+          vertical-align: middle;
+        }
+      }
+
+      .facebook-footer {
+        @include mobile {
+          margin-bottom: 10px;
+        }
+
+        @include tablet {
+          display: flex;
+          align-items: center;
+        }
+
+        &-link {
+          .icon--user {
+            width: 38px;
+            height: 38px;
+            box-sizing: border-box;
+            fill: var(--active---regular);
+            stroke: none;
+
+            &:hover {
+              fill: var(--active-active);
+              stroke: none;
+            }
+          }
+        }
+      }
+
+      .tel-footer {
+        @include mobile {
+          margin-bottom: 10px;
+        }
+
+        .tel-link-footer {
+          color: var(--main---alt);
+          text-align: right;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          &:hover {
+            color: var(--active-active);
+          }
+        }
+      }
+
+      .gmail {
+        &-link {
+          color: var(--active---regular);
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          &:hover {
+            color: var(--active-active);
+          }
+        }
+      }
+    }
+
+    .company-footer {
+      @include mobile {
+        text-align: center;
+      }
+      @include tablet {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+
+      .copyright {
+        color: var(--grey---text);
+
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

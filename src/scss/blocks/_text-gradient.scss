@@ -1,0 +1,13 @@
+.title {
+  font-size: 3rem;
+  text-align: center;
+
+  .gradient {
+    @include text-gradient();
+
+    &:hover {
+      @include text-gradient($start-color: #f0145a);
+      // background: linear-gradient(90deg, #f0145a 0%, #f0145a 100%);
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@mixin mediaBg() {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin laptopHdSize() {
+  @media screen and (min-width: $laptop-hd-size) {
+    @content;
+  }
+}
+
+@mixin laptopSize() {
+  @media screen and (min-width: $laptop-size) {
+    @content;
+  }
+}
+
+@mixin tabletHd() {
+  @media screen and (min-width: $tablet-hd-size) {
+    @content;
+  }
+}
+
+@mixin tabletLg() {
+  @media screen and (min-width: $tablet-lg-size) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (min-width: $tablet-size) {
+    @content;
+  }
+}
+
+@mixin mobileXsUp() {
+  @media screen and (min-width: ($mobile-xs + 1px)) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: $mobile-size) {
+    @content;
+  }
+}
+
+@mixin mobileXsDown() {
+  @media screen and (max-width: $mobile-xs) {
+    @content;
+  }
+}
+
+
+@mixin text-stroke($color: red, $strokeColor: yellow, $stroke-width: 2px) {
+  color: $color;
+  text-shadow: ($stroke-width * -1) ($stroke-width * -1) 0 $strokeColor,
+    $stroke-width ($stroke-width * -1) 0 $strokeColor,
+    ($stroke-width * -1) $stroke-width 0 $strokeColor,
+    $stroke-width $stroke-width 0 $strokeColor;
+
+  @supports (
+    (text-stroke: $stroke-width $strokeColor) or
+      (-webkit-text-stroke: $stroke-width $strokeColor)
+  ) {
+    color: $color !important;
+    -webkit-text-stroke: $stroke-width $strokeColor;
+    text-stroke: $stroke-width $strokeColor;
+    text-shadow: none;
+  }
+}
+
+@mixin toRem($fz: $base-size) {
+  font-size: #{$fz / $base-size}rem;
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@mixin line-clamp($max-line: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $max-line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin text-gradient($start-color: #ef8080, $end-color: #f0145a) {
+  background-image: linear-gradient(90deg, $start-color 0%, $end-color 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+@mixin text-gradient-back($start-color: #f0145a, $end-color: #ef8080) {
+  background-image: linear-gradient(90deg, $start-color 0%, $end-color 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}

@@ -1,0 +1,157 @@
+.team {
+  padding-top: 80px;
+
+  @include mobile {
+    padding-top: 50px;
+  }
+
+  .swiper {
+    .swiper-wrapper {
+      img {
+        @include mobile {
+          border-top-right-radius: 12px;
+          border-top-left-radius: 12px;
+        }
+
+        @include tablet {
+          border-top-right-radius: 12px;
+          border-top-left-radius: 12px;
+        }
+
+        @include tabletHd {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 12px;
+        }
+
+        @include mobile {
+          border-top-right-radius: 12px;
+          border-top-left-radius: 12px;
+        }
+      }
+
+      .swiper-slide {
+        background-color: var(--grey---bg-);
+        border-radius: 12px;
+
+        @include mobile {
+          display: block;
+        }
+
+        @include tablet {
+          display: block;
+        }
+
+        @include tabletHd {
+          display: flex;
+        }
+
+        .team-img-box {
+          display: flex;
+          justify-content: center;
+
+          @include tablet {
+            max-height: 500px;
+          }
+
+          @include tabletHd {
+            aspect-ratio: 400/528;
+            min-width: 400px;
+
+            max-height: unset;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              min-width: 400px;
+            }
+          }
+
+          @include laptopSize {
+            aspect-ratio: 400/344;
+          }
+        }
+
+        .team-inf {
+          padding: 30px;
+
+          .team-link {
+            color: var(--active---regular);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            &::after {
+              content: url(../../img/svg/Arrow.svg);
+            }
+
+            &:hover {
+              color: var(--active-active);
+            }
+          }
+
+          .team-desr {
+            @include text-gradient-back();
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 5px;
+            margin-bottom: 30px;
+
+            @include mobile {
+              font-size: 30px;
+              word-break: break-all;
+            }
+          }
+
+          .name {
+            color: var(--grey---text);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 6px;
+          }
+
+          .work {
+            color: var(--grey---text);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      position: relative;
+      margin-top: 30px;
+
+      &-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        background-color: #d3edff;
+        opacity: 1;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        &:hover {
+          background-color: #76bdf2;
+        }
+
+        &-active {
+          background-color: var(--active---regular);
+        }
+      }
+    }
+  }
+}

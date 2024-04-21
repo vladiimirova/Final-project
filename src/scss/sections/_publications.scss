@@ -1,0 +1,115 @@
+.publications {
+  padding-top: 30px;
+  background-color: var(--grey---bg-);
+
+  .publications-link {
+    color: var(--active---regular);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &::after {
+      content: url(../../img/svg/Arrow.svg);
+    }
+
+    &:hover {
+      color: var(--active-active);
+    }
+  }
+
+  .publications-title {
+    @include text-gradient-back();
+    display: block;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include tablet {
+      margin-top: 10px;
+    }
+
+    @include mobile {
+      margin-top: 5px;
+    }
+  }
+
+  .publications-cards {
+    margin-top: 30px;
+    display: grid;
+    padding-bottom: 30px;
+
+    @include mobile {
+      row-gap: 30px;
+    }
+
+    @include tablet {
+      column-gap: 30px;
+      row-gap: 30px;
+      grid-template-columns: repeat(2, minmax(calc(50% - 15px), auto));
+
+      .third-card {
+        grid-column: span 2;
+      }
+    }
+
+    @include tabletHd {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc(33.33% - 40px), auto)
+      );
+      .third-card {
+        grid-column: auto;
+      }
+    }
+
+    .publications-item {
+      background-color: var(--basic-white);
+      border-radius: 8px;
+
+      .publications-img {
+        img {
+          width: 100%;
+        }
+      }
+
+      .publications-inf {
+        padding: 30px;
+
+        .publications-subtitle {
+          color: var(--active---regular);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        span {
+          color: var(--grey---text);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-top: 15px;
+          padding-bottom: 15px;
+          border-bottom: 4px solid var(--grey---separator);
+          display: block;
+        }
+
+        p {
+          color: var(--Basic-Black, #000);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px; /* 157.143% */
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+/* Контейнери */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    padding-left: var(--container-padding-standart);
+    padding-right: var(--container-padding-standart);
+  }
+
+  @include laptopHdSize {
+    padding-left: var(--container-padding-big);
+    padding-right: var(--container-padding-big);
+  }
+
+  @media (max-width: $mobile-size) {
+    padding-left: var(--container-padding-small);
+    padding-right: var(--container-padding-small);
+  }
+
+  max-width: var(--container-width);
+  width: 100%;
+}
+
+.container-full {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 100%;
+}
+
+.container-left-50 {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 50%;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.container-right-50 {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 50%;
+  margin-left: auto;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.container-right {
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
+
+  @include tablet {
+    padding-left: var(--container-padding);
+  }
+}
+
+.container-left {
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
+
+  @include tablet {
+    padding-right: var(--container-padding);
+  }
+}
+
+.container-half-left {
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
+  );
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
+
+  @include tablet {
+    padding-left: var(--container-padding);
+  }
+
+  @include mobile {
+    padding: 0 var(--container-padding);
+  }
+}
+
+.container-half-right {
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
+  );
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
+
+  @include tablet {
+    padding-right: var(--container-padding);
+  }
+
+  @include mobile {
+    padding: 0 var(--container-padding);
+  }
+}
+
+.containers [class^="container"] {
+  .title-1 {
+    padding: 20px 0;
+    background-color: #ccc;
+
+    @include mobileXsDown {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      background-color: pink;
+    }
+
+    @include tablet {
+      background-color: yellow;
+    }
+
+    @include tabletHd {
+      background-color: blueviolet;
+    }
+
+    @include laptopSize {
+      background-color: rgb(139, 112, 165);
+    }
+
+    @include laptopHdSize {
+      background-color: rgb(200, 39, 165);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}

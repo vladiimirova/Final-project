@@ -1,0 +1,167 @@
+.trust {
+  padding-top: 60px;
+
+  .container {
+    padding: 0;
+
+    @include laptopHdSize {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+
+  .trust-title {
+    color: var(--main---regular);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .companies-wrapper {
+    display: grid;
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fit, minmax(calc(50%), auto));
+    }
+
+    @include mobileXsDown {
+      display: block;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, minmax(calc(33.3%), auto));
+    }
+
+    @include tabletHd {
+      grid-template-columns: repeat(auto-fit, minmax(calc(25%), auto));
+    }
+    
+    @include laptopHdSize {
+      margin-bottom: 60px;
+    }
+
+
+    .company-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    
+      &-1 {
+        padding-top: 36px;
+        padding-bottom: 36px;
+        background-color: #1c4280;
+        @include laptopHdSize {
+          border-top-left-radius: 10px;
+        }
+      }
+
+      &-2 {
+        padding-top: 44px;
+        padding-bottom: 44px;
+        background-color: #143646;
+      }
+
+      &-3 {
+        padding-top: 38px;
+        padding-bottom: 38px;
+        background-color: #f48b30;
+      }
+
+      &-4 {
+        padding-top: 39px;
+        padding-bottom: 39px;
+        background-color: #9e4dc3;
+
+        @include laptopHdSize {
+          border-top-right-radius: 10px;
+        }
+      }
+
+      &-5 {
+        padding-top: 38px;
+        padding-bottom: 38px;
+        background-color: #fd9339;
+      }
+
+      &-6 {
+        padding-top: 36px;
+        padding-bottom: 36px;
+        background-color: #e2e2e4;
+      }
+
+      &-7 {
+        padding-top: 29px;
+        padding-bottom: 30px;
+        background-color: #c71c36;
+
+        @include mobileXsDown {
+          display: none;
+        }
+      }
+
+      &-8 {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        background-color: #dcf3f9;
+
+        @include mobileXsDown {
+          display: none;
+        }
+      }
+
+      &-9 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #eaeaea;
+
+        @include mobileXsDown {
+          display: none;
+        }
+
+        @include laptopHdSize {
+          border-bottom-left-radius: 10px;
+        }
+      }
+
+      &-10 {
+        padding-top: 41px;
+        padding-bottom: 41px;
+        background-color: #282240;
+
+        @include mobileXsDown {
+          display: none;
+        }
+      }
+
+      &-11 {
+        padding-top: 37px;
+        padding-bottom: 37px;
+        background-color: #1d4568;
+
+        @include mobileXsDown {
+          display: none;
+        }
+      }
+
+      &-12 {
+        padding-top: 13px;
+        padding-bottom: 12px;
+        background-color: #000;
+
+        @include mobileXsDown {
+          display: none;
+        }
+
+        @include laptopHdSize {
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+  }
+}

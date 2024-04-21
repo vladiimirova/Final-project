@@ -1,0 +1,42 @@
+/* Base */
+@import './base/reset';
+@import './base/vars';
+@import './base/mixins';
+@import './base/fontsAutoInclude';
+@import './base/base';
+@import './base/utils';
+@import './base/containers';
+@import './base/sticky-footer';
+
+/* Blocks */
+@import './blocks/*.scss';
+@import './blocks/buttons';
+@import './blocks/footer';
+@import './blocks/header';
+@import './blocks/icons';
+@import './blocks/logo';
+@import './blocks/mobile-nav';
+@import './blocks/nav-icon';
+@import './blocks/section-2';
+@import './blocks/text-gradient';
+@import './blocks/titles';
+@import './blocks/menu-top';
+@import './blocks/logo-header';
+@import './blocks/logo-about';
+
+/* Sections */
+@import './sections/provider';
+@import './sections/idea';
+@import './sections/cards';
+@import './sections/team';
+@import './sections/trust';
+@import './sections/publications';
+@import './sections/legal';
+@import './sections/team-img';
+@import './sections/quality';
+@import './sections/achievements';
+
+
+/* Не пишіть CSS код нижче. Тільки у підключених файлах */
+
+

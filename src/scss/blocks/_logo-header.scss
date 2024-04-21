@@ -1,0 +1,50 @@
+.logo {
+  display: flex;
+
+  @include mobile {
+    align-items: center;
+  }
+
+  &-link::after {
+    @media (max-width: $max-width-tablet) {
+      content: url(../../img/svg/Slash.svg);
+      display: inline-block;
+      margin-left: 4px;
+      margin-right: 4px;
+
+      @include mobile {
+        transform: translateY(50%);
+      }
+
+      @include mobileXsDown {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &-svg {
+    display: inline-block;
+
+    @include mobileXsDown {
+      width: 69.3px;
+    }
+  }
+
+  &-item-services {
+    color: var(--basic-white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include tablet {
+      display: none;
+    }
+
+    transition: 0.2s ease-in-out all;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}

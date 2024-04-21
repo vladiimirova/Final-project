@@ -1,0 +1,58 @@
+.button {
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 20px 20px 18px;
+  min-width: 120px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--basic-white);
+  transition: all 0.3s ease-in-out;
+
+  &[disabled] {
+    background-color: #ccc !important;
+    box-shadow: none !important;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 5px;
+  }
+
+  &--blue {
+    box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+    background: var(--active---regular);
+
+    &:hover {
+      background: var(--active-hover);
+    }
+
+    &:focus {
+      outline-color: var(--active-hover);
+    }
+  }
+
+  &--orange {
+    box-shadow: 0 0 20px 0 rgba(255, 153, 36, 0.5);
+    background-color: orangered;
+
+    &:focus {
+      outline-color: orangered;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--180 {
+    min-width: 180px;
+  }
+}

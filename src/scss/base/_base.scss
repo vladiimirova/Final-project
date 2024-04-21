@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(39, 39, 39);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--basic-white);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+{
+  font-family: var(--font-main);
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+
+// Reg
+
+.reg {
+  padding: 60px 0;
+
+  .title-2 {
+    @include text-stroke($color: transparent, $strokeColor: blue);
+    font-size: 5rem;
+  }
+}
+
+.btn_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bg-gradient {
+  background: var(--Gradient-Supersoft, linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%));
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: #E7E7F2;
+    width: 90%;
+    height: 10px;
+    display: block;
+    border-radius: 0 0 12px 12px;
+    right: 0;
+    left: -2px;
+    bottom: -20px;
+    margin: auto;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: #CACADB;
+    width: 95%;
+    height: 10px;
+    display: block;
+    border-radius: 0 0 12px 12px;
+    right: 0;
+    left: -2px;
+    bottom: -10px;
+    margin: auto;
+  }
+}
+
